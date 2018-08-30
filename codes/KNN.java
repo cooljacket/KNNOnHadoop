@@ -101,7 +101,7 @@ public class KNN {
 		}
 
 		public void map(LongWritable lineOffset, Text line, Context context) throws IOException, InterruptedException {
-			StringTokenizer itr = new StringTokenizer(line.toString());
+			StringTokenizer itr = new StringTokenizer(line.toString(), ",");
 			Vector<BigDecimal> train_x = new Vector<>();
 			String train_y = "";
 
